@@ -1,0 +1,625 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ali | Frontend Developer - Portfolio</title>
+    <meta name="description" content="Personal portfolio of Ali: Frontend Developer and first year prepa TIC student at EPI." />
+    <meta property="og:title" content="Ali | Frontend Developer - Portfolio" />
+    <meta property="og:description" content="Personal portfolio of Ali: Frontend Developer and first year prepa TIC student at EPI." />
+    <meta property="og:type" content="website" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <link rel="stylesheet" href="/src/index.css" />
+  </head>
+  <body>
+    <!-- Mobile Header Bar for Phone Viewports -->
+    <header class="mobile-top-bar" id="mobile-top-bar">
+      <div class="mobile-brand">
+        <span style="display:inline-block; width:10px; height:10px; background:var(--accent-color); border-radius:50%;"></span>
+        <span>Ali</span>
+      </div>
+      <div class="mobile-bar-actions">
+        <button type="button" class="mobile-action-btn" id="mobile-profile-toggle" aria-label="Toggle profile sidebar">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>
+        </button>
+        <button type="button" class="mobile-action-btn" id="mobile-menu-toggle" aria-label="Toggle navigation menu">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
+        </button>
+      </div>
+    </header>
+
+    <div class="app-layout">
+      <!-- ================================================================
+           LEFT SIDEBAR (Arter Profile Column)
+           ================================================================ -->
+      <aside class="sidebar" id="sidebar">
+        <div class="sidebar-scroll">
+          <!-- Profile Card -->
+          <div class="profile-box">
+            <div class="avatar-wrapper">
+              <img 
+                src="/assets/aistudio/WhatsApp_Image_2026-10-29_at_7.03.58_PM_1b6ea73a.jpeg" 
+                alt="Ali Profile Picture" 
+                class="avatar-img user-portrait-img"
+                id="sidebar-avatar"
+              />
+              <span class="avatar-status"></span>
+            </div>
+
+            <h2 class="profile-name">Ali</h2>
+            <p class="profile-title">
+              Frontend Developer<br />
+              <span style="color: var(--accent-color); font-weight: 600;">Prepa TIC @ EPI</span>
+            </p>
+          </div>
+
+          <!-- Info Table -->
+          <div class="info-list">
+            <div class="info-item">
+              <span class="info-label">Studies:</span>
+              <span class="info-val">1st year prepa TIC</span>
+            </div>
+            <div class="info-item">
+              <span class="info-label">School:</span>
+              <span class="info-val">EPI</span>
+            </div>
+            <div class="info-item">
+              <span class="info-label">Club:</span>
+              <span class="info-val">GDG on Campus EPI</span>
+            </div>
+            <div class="info-item">
+              <span class="info-label">Role:</span>
+              <span class="info-val" style="color:var(--accent-color);">Technical Assistant</span>
+            </div>
+            <div class="info-item">
+              <span class="info-label">Focus:</span>
+              <span class="info-val">Social Life &amp; Dev</span>
+            </div>
+            <div class="info-item">
+              <span class="info-label">Status:</span>
+              <span class="info-val" style="color:#22c55e;">Available</span>
+            </div>
+          </div>
+
+          <!-- Circular Skill / Language Progress Rings -->
+          <div class="circles-row">
+            <!-- HTML Circle -->
+            <div class="circle-item" title="HTML: Semantic &amp; Accessible Structure (95%)">
+              <div class="circle-svg-wrap">
+                <svg viewBox="0 0 36 36">
+                  <path class="circle-bg" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" />
+                  <path class="circle-progress" stroke-dasharray="95, 100" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" />
+                </svg>
+                <div class="circle-val">
+                  <span class="circle-num">95</span><span class="circle-pct">%</span>
+                </div>
+              </div>
+              <span class="circle-label">HTML</span>
+              <span class="circle-sublabel">Markup</span>
+            </div>
+
+            <!-- CSS Circle -->
+            <div class="circle-item" title="CSS: Responsive &amp; Modern Layouts (90%)">
+              <div class="circle-svg-wrap">
+                <svg viewBox="0 0 36 36">
+                  <path class="circle-bg" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" />
+                  <path class="circle-progress" stroke-dasharray="90, 100" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" />
+                </svg>
+                <div class="circle-val">
+                  <span class="circle-num">90</span><span class="circle-pct">%</span>
+                </div>
+              </div>
+              <span class="circle-label">CSS</span>
+              <span class="circle-sublabel">Styling</span>
+            </div>
+
+            <!-- JS Circle -->
+            <div class="circle-item" title="JavaScript: Dynamic Components &amp; Logic (85%)">
+              <div class="circle-svg-wrap">
+                <svg viewBox="0 0 36 36">
+                  <path class="circle-bg" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" />
+                  <path class="circle-progress" stroke-dasharray="85, 100" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" />
+                </svg>
+                <div class="circle-val">
+                  <span class="circle-num">85</span><span class="circle-pct">%</span>
+                </div>
+              </div>
+              <span class="circle-label">JS</span>
+              <span class="circle-sublabel">Logic</span>
+            </div>
+          </div>
+
+          <!-- Progress Bars (html, css, js, php) -->
+          <div class="skills-bars">
+            <div class="bar-item">
+              <div class="bar-header">
+                <span class="bar-name">html</span>
+                <span class="bar-pct">95%</span>
+              </div>
+              <div class="bar-track">
+                <div class="bar-fill" style="width: 95%;"></div>
+              </div>
+            </div>
+
+            <div class="bar-item">
+              <div class="bar-header">
+                <span class="bar-name">css</span>
+                <span class="bar-pct">90%</span>
+              </div>
+              <div class="bar-track">
+                <div class="bar-fill" style="width: 90%;"></div>
+              </div>
+            </div>
+
+            <div class="bar-item">
+              <div class="bar-header">
+                <span class="bar-name">js</span>
+                <span class="bar-pct">85%</span>
+              </div>
+              <div class="bar-track">
+                <div class="bar-fill" style="width: 85%;"></div>
+              </div>
+            </div>
+
+            <div class="bar-item">
+              <div class="bar-header">
+                <span class="bar-name">php</span>
+                <span class="bar-pct">80%</span>
+              </div>
+              <div class="bar-track">
+                <div class="bar-fill" style="width: 80%;"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Sidebar Footer Social Icons -->
+        <div class="sidebar-footer">
+          <a href="https://github.com/mohamedaliboubaker" target="_blank" rel="noopener noreferrer" class="social-icon-btn" title="GitHub Profile">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z"/></svg>
+          </a>
+          <a href="mailto:mouhamedaliboubaker9@gmail.com" class="social-icon-btn" title="Send Email">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="16" x="2" y="4" rx="2"></rect><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"></path></svg>
+          </a>
+          <a href="#contact" class="social-icon-btn" title="Contact Section">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path></svg>
+          </a>
+        </div>
+      </aside>
+
+      <!-- ================================================================
+           MAIN CONTENT AREA
+           ================================================================ -->
+      <main class="main-content" id="main-content">
+        <!-- ============================================================
+             SECTION 1: HERO (Arter Banner Style)
+             ============================================================ -->
+        <section id="hero" class="hero-section fade-in-section is-visible">
+          <div class="hero-banner-card">
+            <div class="hero-banner-text">
+              <h1 class="hero-main-title">
+                Discover Ali's<br />Developer Space!
+              </h1>
+
+              <div class="hero-code-line">
+                <span class="code-tag">&lt;code&gt;</span>
+                <span>frontend dev , Technical Assistant @ GDG on Campus EPI</span>
+                <span class="code-tag">&lt;/code&gt;</span>
+              </div>
+
+              <a href="#projects" class="hero-banner-btn">
+                <span>Explore Projects</span>
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path></svg>
+              </a>
+            </div>
+
+            <div class="hero-photo-container">
+              <div class="hero-character-box">
+                <img 
+                  src="/assets/aistudio/WhatsApp_Image_2026-10-29_at_7.03.58_PM_1b6ea73a.jpeg" 
+                  alt="Ali - Frontend Developer" 
+                  class="hero-character-img user-portrait-img"
+                  id="hero-portrait"
+                />
+              </div>
+            </div>
+          </div>
+
+          <!-- Highlight Stats Bar -->
+          <div class="stats-bar">
+            <div class="stat-item">
+              <span class="stat-number">1st</span>
+              <span class="stat-label">Year Prepa TIC<br />Engineering</span>
+            </div>
+            <div class="stat-item">
+              <span class="stat-number">EPI</span>
+              <span class="stat-label">University &amp;<br />Polytechnic</span>
+            </div>
+            <div class="stat-item">
+              <span class="stat-number">GDG</span>
+              <span class="stat-label">Technical Assistant<br />On Campus EPI</span>
+            </div>
+            <div class="stat-item">
+              <span class="stat-number">3+</span>
+              <span class="stat-label">Projects &amp; Websites<br />Club &amp; Private Clients</span>
+            </div>
+          </div>
+        </section>
+
+        <!-- ============================================================
+             SECTION 2: ABOUT
+             ============================================================ -->
+        <section id="about" class="about-section fade-in-section">
+          <h2 class="section-headline">About Me</h2>
+
+          <div class="about-grid">
+            <!-- Box 1 -->
+            <div class="content-card about-box">
+              <h3 class="about-box-title">Ali</h3>
+              <p class="about-box-desc">
+                Enthusiastic and motivated frontend developer focused on building interactive, responsive web applications with semantic code and smooth user interfaces.
+              </p>
+              <div class="about-highlight-pill">
+                <span>Frontend Dev</span>
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"></polyline></svg>
+              </div>
+            </div>
+
+            <!-- Box 2 -->
+            <div class="content-card about-box">
+              <h3 class="about-box-title">Studies at EPI</h3>
+              <p class="about-box-desc">
+                Currently enrolled in <strong>first year prepa TIC</strong> at <strong>EPI</strong>, mastering fundamental mathematics, computer systems, algorithms, and web programming.
+              </p>
+              <div class="about-highlight-pill">
+                <span>Prepa TIC</span>
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"></polyline></svg>
+              </div>
+            </div>
+
+            <!-- Box 3 -->
+            <div class="content-card about-box">
+              <h3 class="about-box-title">Social Life &amp; GDG Club</h3>
+              <p class="about-box-desc">
+                Technical Assistant in <strong>GDG on Campus EPI</strong> club. Active in university community life, organizing technical events, workshops, and building software solutions for the student club.
+              </p>
+              <div class="about-highlight-pill">
+                <span>GDG on Campus EPI</span>
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"></polyline></svg>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- ============================================================
+             SECTION 3: PROJECTS (Online Reservation App)
+             ============================================================ -->
+        <section id="projects" class="projects-section fade-in-section">
+          <h2 class="section-headline">Projects</h2>
+
+          <div class="project-feature-card">
+            <div class="project-top-header">
+              <div class="project-title-group">
+                <h3>Online Reservation App</h3>
+                <p>onligne reservation app built with HTML, CSS, JavaScript &amp; PHP</p>
+              </div>
+              <div class="tech-badges-row">
+                <span class="tech-tag highlight">HTML</span>
+                <span class="tech-tag highlight">CSS</span>
+                <span class="tech-tag highlight">JavaScript</span>
+                <span class="tech-tag highlight">PHP</span>
+              </div>
+            </div>
+
+            <div class="project-inner-content">
+              <!-- Interactive Live Booking Simulator Prototype -->
+              <div class="simulator-box">
+                <div class="sim-header">
+                  <div class="sim-title">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect width="18" height="18" x="3" y="4" rx="2" ry="2"></rect><line x1="16" x2="16" y1="2" y2="6"></line><line x1="8" x2="8" y1="2" y2="6"></line><line x1="3" x2="21" y1="10" y2="10"></line></svg>
+                    <span>Online Reservation System &bull; Interactive Prototype</span>
+                  </div>
+                  <span class="sim-badge">Live Demo</span>
+                </div>
+
+                <div class="sim-grid">
+                  <div class="sim-group">
+                    <label for="demo-service" class="sim-label">Select Service</label>
+                    <select id="demo-service" class="sim-select">
+                      <option value="Online Booking">Appointment Reservation</option>
+                      <option value="Consultation">Project Consultation</option>
+                      <option value="Review Session">Code Review Session</option>
+                    </select>
+                  </div>
+
+                  <div class="sim-group">
+                    <label for="demo-date" class="sim-label">Select Date</label>
+                    <input type="date" id="demo-date" class="sim-input" />
+                  </div>
+                </div>
+
+                <div class="sim-group">
+                  <label class="sim-label">Select Booking Slot</label>
+                  <div class="sim-slots" id="slot-buttons">
+                    <button type="button" class="sim-slot-btn active" data-time="09:00 AM">09:00 AM</button>
+                    <button type="button" class="sim-slot-btn" data-time="11:30 AM">11:30 AM</button>
+                    <button type="button" class="sim-slot-btn" data-time="02:00 PM">02:00 PM</button>
+                    <button type="button" class="sim-slot-btn" data-time="03:30 PM">03:30 PM</button>
+                    <button type="button" class="sim-slot-btn" data-time="05:00 PM">05:00 PM</button>
+                    <button type="button" class="sim-slot-btn" data-time="06:30 PM">06:30 PM</button>
+                  </div>
+                </div>
+
+                <div class="sim-status-banner">
+                  <div class="sim-status-text" id="demo-summary">
+                    Booking: <strong>Appointment Reservation</strong> on <span id="summary-date">Tomorrow</span> at <span id="summary-slot">09:00 AM</span>
+                  </div>
+                  <button type="button" id="confirm-booking-btn" class="sim-confirm-btn">Confirm Slot</button>
+                </div>
+              </div>
+
+              <div class="project-card-footer">
+                <span style="font-size:0.85rem; color:var(--text-muted);">Explore source code and repository on GitHub:</span>
+                <a href="https://github.com/mohamedaliboubaker" target="_blank" rel="noopener noreferrer" class="action-btn-small">
+                  <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z"/></svg>
+                  <span>View on GitHub</span>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Secondary Projects Subgrid (GDG Club App & Client Websites) -->
+          <div class="projects-subgrid">
+            <!-- Project 2: GDG on Campus EPI Club Application -->
+            <div class="project-compact-card">
+              <div>
+                <div class="project-compact-header">
+                  <div>
+                    <h4 class="project-compact-title">GDG on Campus EPI Club App</h4>
+                    <p style="font-size:0.775rem; color:var(--accent-color); font-weight:600; text-transform:uppercase; letter-spacing:0.04em;">Club Application &bull; Technical Assistant</p>
+                  </div>
+                  <span class="tech-tag highlight">Club App</span>
+                </div>
+                <p class="project-compact-desc">
+                  Interactive application built for the <strong>GDG on Campus EPI</strong> club to manage technical events, announcement feeds, and active member registrations.
+                </p>
+                <div class="tech-badges-row" style="margin-bottom:16px;">
+                  <span class="tech-tag">HTML</span>
+                  <span class="tech-tag">CSS</span>
+                  <span class="tech-tag">JavaScript</span>
+                  <span class="tech-tag">PHP</span>
+                </div>
+              </div>
+
+              <div style="display:flex; justify-content:space-between; align-items:center; padding-top:12px; border-top:1px solid var(--border-subtle);">
+                <span style="font-size:0.8rem; color:var(--text-muted);">EPI Club System</span>
+                <a href="https://github.com/mohamedaliboubaker" target="_blank" rel="noopener noreferrer" class="action-btn-small">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z"/></svg>
+                  <span>View GitHub</span>
+                </a>
+              </div>
+            </div>
+
+            <!-- Project 3: Websites for Private Societies -->
+            <div class="project-compact-card">
+              <div>
+                <div class="project-compact-header">
+                  <div>
+                    <h4 class="project-compact-title">Websites for Private Companies</h4>
+                    <p style="font-size:0.775rem; color:var(--accent-color); font-weight:600; text-transform:uppercase; letter-spacing:0.04em;">Commercial &bull; Private Companies</p>
+                  </div>
+                  <span class="tech-tag highlight">Client Solutions</span>
+                </div>
+                <p class="project-compact-desc">
+                  Designing and deploying responsive corporate websites, business landing pages, and web portals crafted for private societies and enterprise organizations.
+                </p>
+                <div class="tech-badges-row" style="margin-bottom:16px;">
+                  <span class="tech-tag">HTML</span>
+                  <span class="tech-tag">CSS</span>
+                  <span class="tech-tag">JavaScript</span>
+                </div>
+              </div>
+
+              <div style="display:flex; justify-content:space-between; align-items:center; padding-top:12px; border-top:1px solid var(--border-subtle);">
+                <span style="font-size:0.8rem; color:var(--text-muted);">Client Portals</span>
+                <a href="https://github.com/mohamedaliboubaker" target="_blank" rel="noopener noreferrer" class="action-btn-small">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z"/></svg>
+                  <span>View GitHub</span>
+                </a>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- ============================================================
+             SECTION 4: SKILLS
+             ============================================================ -->
+        <section id="skills" class="skills-section fade-in-section">
+          <h2 class="section-headline">Skills</h2>
+
+          <div class="skills-cards-grid">
+            <!-- HTML -->
+            <div class="content-card skill-feature-card">
+              <div class="skill-icon-cube">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="16 18 22 12 16 6"></polyline><polyline points="8 6 2 12 8 18"></polyline></svg>
+              </div>
+              <h3 class="skill-card-name">HTML</h3>
+              <span class="skill-card-role">Semantic Markup</span>
+              <div class="skill-code-sample">&lt;main role="app"&gt;</div>
+            </div>
+
+            <!-- CSS -->
+            <div class="content-card skill-feature-card">
+              <div class="skill-icon-cube">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2l9 4.5V12c0 5-4 9-9 10s-9-5-9-10V6.5L12 2z"></path></svg>
+              </div>
+              <h3 class="skill-card-name">CSS</h3>
+              <span class="skill-card-role">Design &amp; Layout</span>
+              <div class="skill-code-sample">display: grid;</div>
+            </div>
+
+            <!-- JS -->
+            <div class="content-card skill-feature-card">
+              <div class="skill-icon-cube">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect width="18" height="18" x="3" y="3" rx="2"></rect><path d="m10 15 5-3-5-3v6z"></path></svg>
+              </div>
+              <h3 class="skill-card-name">JS</h3>
+              <span class="skill-card-role">Dynamic Logic</span>
+              <div class="skill-code-sample">addEventListener()</div>
+            </div>
+
+            <!-- PHP -->
+            <div class="content-card skill-feature-card">
+              <div class="skill-icon-cube">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect width="20" height="14" x="2" y="5" rx="2"></rect><line x1="2" x2="22" y1="10" y2="10"></line></svg>
+              </div>
+              <h3 class="skill-card-name">PHP</h3>
+              <span class="skill-card-role">Backend Server</span>
+              <div class="skill-code-sample">&lt;?php booking(); ?&gt;</div>
+            </div>
+          </div>
+        </section>
+
+        <!-- ============================================================
+             SECTION 5: CONTACT
+             ============================================================ -->
+        <section id="contact" class="contact-section fade-in-section">
+          <h2 class="section-headline">Contact Information</h2>
+
+          <div class="contact-layout-grid">
+            <!-- Email Tile -->
+            <div class="content-card contact-tile">
+              <div>
+                <div class="contact-tile-top">
+                  <div class="contact-tile-icon">
+                    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect width="20" height="16" x="2" y="4" rx="2"></rect><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"></path></svg>
+                  </div>
+                  <div>
+                    <h3 class="contact-tile-type">Email Address</h3>
+                    <div class="contact-tile-value" id="user-email-text">mouhamedaliboubaker9@gmail.com</div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="contact-actions-bar">
+                <a href="mailto:mouhamedaliboubaker9@gmail.com" class="action-btn-small" style="background:var(--accent-color); color:var(--accent-text);">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path></svg>
+                  Send Email
+                </a>
+                <button type="button" class="action-btn-small" id="copy-email-btn">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect width="14" height="14" x="8" y="8" rx="2" ry="2"></rect><path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"></path></svg>
+                  Copy Address
+                </button>
+              </div>
+            </div>
+
+            <!-- GitHub Tile -->
+            <div class="content-card contact-tile">
+              <div>
+                <div class="contact-tile-top">
+                  <div class="contact-tile-icon">
+                    <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z"/></svg>
+                  </div>
+                  <div>
+                    <h3 class="contact-tile-type">GitHub Profile</h3>
+                    <div class="contact-tile-value">github.com/mohamedaliboubaker</div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="contact-actions-bar">
+                <a href="https://github.com/mohamedaliboubaker" target="_blank" rel="noopener noreferrer" class="action-btn-small">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" x2="21" y1="14" y2="3"></line></svg>
+                  Open GitHub
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Quick Email Message Form -->
+          <div class="quick-message-form">
+            <h3 style="font-size: 1.05rem; font-weight:700; color:var(--text-head); margin-bottom: 4px;">Send a Direct Message</h3>
+            <p style="font-size: 0.85rem; color: var(--text-muted); margin-bottom: 20px;">Compose a message below to launch your email client addressing Ali.</p>
+
+            <form id="contact-form">
+              <div class="form-inputs-row">
+                <div class="field-group">
+                  <label for="sender-name" class="field-label">Name</label>
+                  <input type="text" id="sender-name" class="field-input" placeholder="Your name" required />
+                </div>
+                <div class="field-group">
+                  <label for="sender-subject" class="field-label">Subject</label>
+                  <input type="text" id="sender-subject" class="field-input" placeholder="Project inquiry" required />
+                </div>
+              </div>
+
+              <div class="field-group">
+                <label for="sender-body" class="field-label">Message</label>
+                <textarea id="sender-body" class="field-textarea" placeholder="Write your message here..." required></textarea>
+              </div>
+
+              <button type="submit" class="hero-banner-btn" style="padding: 10px 24px; font-size: 0.8rem;">
+                <span>Send Message</span>
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="22" y1="2" x2="11" y2="13"></line><polygon points="22 2 15 22 11 13 2 9 22 2"></polygon></svg>
+              </button>
+            </form>
+          </div>
+        </section>
+
+        <!-- Footer -->
+        <footer style="padding: 30px 0 10px; border-top: 1px solid var(--border-subtle); display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:12px; font-size:0.8rem; color:var(--text-muted);">
+          <div>&copy; 2026 Ali &bull; Frontend Developer &bull; Prepa TIC @ EPI</div>
+          <div style="display:flex; gap:16px;">
+            <a href="#hero" style="color:var(--text-muted); text-decoration:none;">Back to Top</a>
+            <a href="mailto:mouhamedaliboubaker9@gmail.com" style="color:var(--accent-color); text-decoration:none;">Email</a>
+            <a href="https://github.com/mohamedaliboubaker" target="_blank" rel="noopener noreferrer" style="color:var(--text-muted); text-decoration:none;">GitHub</a>
+          </div>
+        </footer>
+      </main>
+
+      <!-- ================================================================
+           RIGHT NAVIGATION RAIL (Arter Style)
+           ================================================================ -->
+      <aside class="nav-rail" id="nav-rail">
+        <!-- Hamburger Menu Button -->
+        <button type="button" class="nav-rail-toggle" id="rail-menu-btn" aria-label="Toggle navigation drawer">
+          <span class="rail-line"></span>
+          <span class="rail-line"></span>
+          <span class="rail-line"></span>
+        </button>
+
+        <!-- Vertical Text Indicator -->
+        <div class="nav-rail-vertical-text">
+          <span id="rail-active-section">PORTFOLIO</span>
+        </div>
+
+        <!-- Language / Theme Indicator -->
+        <div class="nav-rail-lang">
+          <span class="lang-badge active">EN</span>
+          <span class="lang-badge" id="theme-toggle-btn" title="Toggle Accent (Gold/Blue)">★</span>
+        </div>
+      </aside>
+
+      <!-- Navigation Drawer (Opened by Hamburger) -->
+      <div class="nav-drawer" id="nav-drawer">
+        <ul class="drawer-links">
+          <li><a href="#hero" class="drawer-link active">Home <span>01</span></a></li>
+          <li><a href="#about" class="drawer-link">About <span>02</span></a></li>
+          <li><a href="#projects" class="drawer-link">Projects <span>03</span></a></li>
+          <li><a href="#skills" class="drawer-link">Skills <span>04</span></a></li>
+          <li><a href="#contact" class="drawer-link">Contact <span>05</span></a></li>
+        </ul>
+      </div>
+    </div>
+
+
+
+    <!-- Toast Notification Notice -->
+    <div id="toast" class="toast-notice" role="alert" aria-live="polite">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--accent-color)" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+      <span id="toast-text">Email copied to clipboard!</span>
+    </div>
+
+    <script type="module" src="/src/main.ts"></script>
+  </body>
+</html>
